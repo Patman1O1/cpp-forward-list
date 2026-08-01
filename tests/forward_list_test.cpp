@@ -3,8 +3,8 @@
 #include <gmock/gmock.h>
 
 // Local Includes
-#include <collections/cpp_forward_list.hpp>
+#include <collections/forward_list.hpp>
 
-namespace cpp_forward_list_testing {
+namespace collections::forward_list_testing {
 
-} // namespace cpp_forward_list_testing
+} // namespace collections::forward_list_testing
