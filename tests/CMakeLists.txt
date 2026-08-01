@@ -5,30 +5,30 @@ include(GoogleTest)
 enable_testing()
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Target: cpp_forward_list_test
-# Alias: collections::cpp_forward_list_test
+# Target: forward_list_test
+# Alias: collections::forward_list_test
 # Type: Executable
-# Dependencies: GTest::gtest_main, GTest::gmock_main, collections::cpp_forward_list_headers
+# Dependencies: GTest::gtest_main, GTest::gmock_main, collections::forward_list_headers
 #-----------------------------------------------------------------------------------------------------------------------
 # Target definition
-add_executable(cpp_forward_list_test)
+add_executable(forward_list_test)
 
 # Target alias
-add_executable(collections::cpp_forward_list_test ALIAS cpp_forward_list_test)
+add_executable(collections::forward_list_test ALIAS forward_list_test)
 
 # Target sources
-target_sources(cpp_forward_list_test
+target_sources(forward_list_test
     PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/cpp_forward_list_test.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/forward_list_test.cpp
 )
 
 # Target dependencies
-target_link_libraries(cpp_forward_list_test
+target_link_libraries(forward_list_test
     PRIVATE
-        collections::cpp_forward_list_headers
+        collections::forward_list_headers
         GTest::gtest_main
         GTest::gmock_main
 )
 
 # Test discovery
-gtest_discover_tests(cpp_forward_list_test)
+gtest_discover_tests(forward_list_test)
