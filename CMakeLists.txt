@@ -2,7 +2,7 @@
 # Information
 #-----------------------------------------------------------------------------------------------------------------------
 cmake_minimum_required(VERSION 4.3.0)
-project("cpp_forward_list"
+project("forward_list"
         VERSION 0.1.0
         DESCRIPTION ""
         LANGUAGES CXX
@@ -61,44 +61,44 @@ if(NOT CMAKE_SKIP_INSTALL_RULES)
 endif()
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Target: cpp_forward_list_headers
-# Alias: collections::cpp_forward_list_headers
+# Target: forward_list_headers
+# Alias: collections::forward_list_headers
 # Type: Interface Library
 #-----------------------------------------------------------------------------------------------------------------------
 # Target definition
-add_library(cpp_forward_list_headers INTERFACE)
+add_library(forward_list_headers INTERFACE)
 
 # Target alias
-add_library(collections::cpp_forward_list_headers ALIAS cpp_forward_list_headers)
+add_library(collections::forward_list_headers ALIAS forward_list_headers)
 
 # Target headers
-target_include_directories(cpp_forward_list_headers
+target_include_directories(forward_list_headers
     INTERFACE
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Target: cpp_forward_list
-# Alias: collections::cpp_forward_list
+# Target: forward_list
+# Alias: collections::forward_list
 # Type: Interface Library
-# Dependencies: collections::cpp_forward_list_headers
+# Dependencies: collections::forward_list_headers
 #-----------------------------------------------------------------------------------------------------------------------
 # Target definition
-add_library(cpp_forward_list INTERFACE)
+add_library(forward_list INTERFACE)
 
 # Target alias
-add_library(collections::cpp_forward_list ALIAS cpp_forward_list)
+add_library(collections::forward_list ALIAS forward_list)
 
 # Target dependencies
-target_link_libraries(cpp_forward_list
+target_link_libraries(forward_list
     INTERFACE
-        collections::cpp_forward_list_headers
+        collections::forward_list_headers
 )
 
 # Target properties
-set_target_properties(cpp_forward_list PROPERTIES
-        OUTPUT_NAME cpp_forward_list
+set_target_properties(forward_list PROPERTIES
+        OUTPUT_NAME forward_list
         VERSION ${PROJECT_VERSION}
         SOVERSION ${PROJECT_VERSION_MAJOR}
         CXX_VISIBILITY_PRESET hidden
@@ -107,11 +107,11 @@ set_target_properties(cpp_forward_list PROPERTIES
 
 if(NOT CMAKE_SKIP_INSTALL_RULES)
     # Install cpp_forward_list
-    install(TARGETS cpp_forward_list
-            RUNTIME COMPONENT cpp_forward_list
-            LIBRARY COMPONENT cpp_forward_list
-            NAMELINK_COMPONENT cpp_forward_list
-            ARCHIVE COMPONENT cpp_forward_list
+    install(TARGETS forward_list
+            RUNTIME COMPONENT forward_list
+            LIBRARY COMPONENT forward_list
+            NAMELINK_COMPONENT forward_list
+            ARCHIVE COMPONENT forward_list
             INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
 endif()
 
