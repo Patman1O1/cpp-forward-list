@@ -5,7 +5,7 @@
 #include <iostream>
 
 // Local Includes
-#include <collections/cpp_forward_list.hpp>
+#include <collections/forward_list.hpp>
 
 auto main() -> int {
     std::println(std::cout, "Hello world!");
