@@ -1,7 +1,7 @@
 #-----------------------------------------------------------------------------------------------------------------------
 # Target: test_package
 # Type: Executable
-# Dependencies: collections::cpp_forward_list
+# Dependencies: collections::forward_list
 #-----------------------------------------------------------------------------------------------------------------------
 # Target definition
 add_executable(test_package)
@@ -15,5 +15,5 @@ target_sources(test_package
 # Target dependencies
 target_link_libraries(test_package
     PRIVATE
-        collections::cpp_forward_list
+        collections::forward_list
 )
