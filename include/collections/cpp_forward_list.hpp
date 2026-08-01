@@ -1,0 +1,4 @@
+#ifndef CPP_FORWARD_LIST_HPP
+#define CPP_FORWARD_LIST_HPP
+
+#endif // #ifndef CPP_FORWARD_LIST_HPP
